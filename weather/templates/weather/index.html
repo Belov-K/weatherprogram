@@ -11,13 +11,13 @@
 <body>
     <div class="d-flex flex-column flex-md-row align-items-center pb-2 mb-3 bg-white border-bottom shadow-sm">
       <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
-        <a class="ms-4 py-2 fs-4 link-body-emphasis text-decoration-none" href="#">Weather☁️</a>
+        <a class="me-3 ms-4 py-3 fs-4 link-body-emphasis text-decoration-none" href="#">Weather☁️</a>
       </a>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
         <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Главная</a>
         <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Информация</a>
-        <a class="btn btn-outline-primary" href="#">Документация</a>
+        <a class="me-3 btn btn-outline-primary" href="#">Документация</a>
       </nav>
     </div>
     <div class="container mt-5">
@@ -34,7 +34,9 @@
             <div class="col-4 offset-1">
                 <h1>Информация</h1>
                 <div class="alert alert-danger">
-                    Погода в Москве
+                    <b>Город:</b> {{info.city}}<br>
+                    <b>Температура:</b> {{info.temp}}<sup>o</sup><br>
+                    <img src="http://openweathermap.org/img/w/{{info.icon}}.png" alt="Фото погоды" class="img-thumbnail">
                 </div>
             </div>
         </div>

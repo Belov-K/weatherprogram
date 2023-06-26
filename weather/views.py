@@ -17,3 +17,11 @@ def index(request):
         all_cities.append(city_info)
     context={'all_info': all_cities}
     return render(request, 'weather/index.html', context)
+
+def info(request):
+    context={}
+    return render(request, 'weather/info.html', context)
+
+def documents(request):
+    context={}
+    return render(request, 'weather/documents.html', context)

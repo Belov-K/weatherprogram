@@ -8,7 +8,7 @@ def index(request):
     cities=City.objects.all()
     all_cities=[]
     for city in cities:
-        res = requests.get(url.format(city)).json()
+        res = requests.get(url.format(city.name)).json()
         city_info={
             'city': city.name,
             'temp': res["main"]["temp"],
